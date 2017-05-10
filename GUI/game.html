@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Werewolf 160</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/picnicss/6.3.2/picnic.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <!-- Loading Stuff from Lambda -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+  <script>
+
+  // var currID = 6;
+  // $(document).ready(function(){
+  //     $.getJSON("https://d8iqr83w63.execute-api.us-east-1.amazonaws.com/prod/MafiaRequest?TableName=Game_state",null,function(data){
+  //       var AppendTo = $(".users");
+  //       AppendTo.append(data.Items);
+  //       // Current gets all rooms, should eventually switch to just one room
+  //       $.each(data.Items, function(index, game) {
+  //         $.getJSON("https://d8iqr83w63.execute-api.us-east-1.amazonaws.com/prod/MafiaRequest?TableName=mafia",null,function(data1){
+  //           $.each(data1.Items, function(index, user) {
+  //             if (user.GameID == game.RoomId) {
+  //               if (user.isKilled) {
+  //                   AppendTo.append("<a href='#'><span><div class='circle'><img src='img/skull.png'/></div><span class='username'>Player "+user.Player+"</span></span></a>");
+  //               } else if (user.Player == currID || (user.Role == "Sear" && isSear)) {
+  //                 if (user.Role == "Werewolf") {
+  //                   AppendTo.append("<a href='#'><span><div class='circle'><img src='img/wolf.png'/></div><span class='username'>"+user.Role+"</span></span></a>");
+  //                 } else if (user.Role == "Villager") {
+  //                   AppendTo.append("<a href='#'><span><div class='circle'><img src='img/villager.png'/></div><span class='username'>"+user.Role+"</span></span></a>");
+  //                 } else if (user.Role == "Doctor") {
+  //                   AppendTo.append("<a href='#'><span><div class='circle'><img src='img/doctor.png'/></div><span class='username'>"+user.Role+"</span></span></a>");
+  //                 }
+  //               } else {
+  //                 AppendTo.append("<a href='#'><span><div class='circle'><img src='img/question.png'/></div><span class='username'>Player "+user.Player+"</span></span></a>");
+  //               }
+  //             }
+  //           });
+  //         });
+  //       });
+  //     });
+  // });
+  </script>
+</head>
+
+<body>
+  <ul class="pages">
+    <li class="lobby page">
+      <div class="form">
+        <h3 class="title">What room do you want to join?</h3>
+        <input class="roomInput" type="text" maxlength="14" />
+      </div>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">Welcome to Werewolf 160</h3>
+        <img width= "100px" height="100px" src='img/wwolf.png' />
+        <h3 class="title">What's your nickname?</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li>
+    <li class="game page">
+      <div class="users">
+        <!--
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        -->
+      </div>
+      <div class="game area">
+<!--         <div class ="welcome">
+        </div>
+        <div class = "broadcast">
+        </div> -->
+        <!-- ON JOINING, WELCOME SPECIFIC PLAYER.  -->
+        <div class = "game message">
+
+        </div>
+        <div class = "confirm">
+          CLICK THIS TO CONFIRM CHOICE
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</body>
+</html>
